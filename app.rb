@@ -3,9 +3,11 @@ require './lib/bookmark'
 
 class BookmarkManager < Sinatra::Base
 
-  get '/' do 
+  get '/' do
+     p ENV
     'Bookmark Manager'
-  end 
+    # p ENV
+  end
 
   get '/bookmarks' do
     @bookmarks = Bookmark.all
