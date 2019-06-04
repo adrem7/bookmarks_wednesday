@@ -2,11 +2,10 @@ require 'sinatra/base'
 require './lib/bookmark'
 
 class BookmarkManager < Sinatra::Base
-
   get '/' do
-     p ENV
+    puts '*******************'
+    p ENV
     'Bookmark Manager'
-    # p ENV
   end
 
   get '/bookmarks' do
@@ -14,5 +13,5 @@ class BookmarkManager < Sinatra::Base
     erb :index
   end
 
-  run! if app_file == $0
+  run! if app_file == $PROGRAM_NAME
 end

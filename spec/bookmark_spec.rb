@@ -1,10 +1,17 @@
 require 'bookmark'
 
 describe 'Bookmark' do
-  let(:bookmark) { Bookmark.new }
+  it 'all method returns list of bookmarks' do
+    connection = PG.connect(dbname: 'bookmark_manager_test')
 
-  it 'all method shows array of bookmark instances' do
-    expected_array = ["http://www.makersacademy.com", "http://www.google.com", "http://www.destroyallsoftware.com"]
-    expect(Bookmark.all).to eq(expected_array)
+    connection.exec("INSERT INTO bookmarks (url) VALUES ('http://www.makersacademy.com');")
+    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
+    connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+
+    bookmarks = Bookmark.all
+
+    expect(bookmarks).to include('http://www.makersacademy.com')
+    expect(bookmarks).to include('http://www.google.com')
+    expect(bookmarks).to include('http://www.destroyallsoftware.com')
   end
 end
