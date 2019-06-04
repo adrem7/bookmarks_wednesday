@@ -8,9 +8,9 @@ feature 'Bookmark' do
 
   scenario 'Displays bookmarks' do
     visit('/bookmarks')
-    expect(page).to have_content 'www.google.com'
-    expect(page).to have_content 'www.bbc.co.uk'
-    expect(page).to have_content 'www.bing.com'
+    expect(page).to have_content 'http://google.com'
+    expect(page).to have_content 'http://www.makersacademy.com'
+    expect(page).to have_content 'http://www.destroyallsoftware.com'
   end
 
 end
