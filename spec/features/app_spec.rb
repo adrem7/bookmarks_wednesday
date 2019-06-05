@@ -15,3 +15,13 @@ feature 'Bookmark' do
     expect(page).to have_content 'http://www.destroyallsoftware.com'
   end
 end
+
+feature 'Adding Bookmarks' do
+  scenario 'User to add bookmark via form' do
+    PG.connect(dbname: 'bookmark_manager_test')
+    visit('/bookmarks')
+    fill_in :bookmark_url, with: 'http://www.odeon.com'
+    click_on :Submit
+    expect(page).to have_content 'http://www.odeon.com'
+  end
+end
