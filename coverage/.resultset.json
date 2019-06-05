@@ -1,26 +1,30 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/student/Documents/Week6_DB/bookmarks/spec/bookmark_spec.rb": [
+      "/Users/araisin/Desktop/Makers/bookmarks/spec/bookmark_spec.rb": [
         1,
+        null,
+        1,
+        2,
+        3,
         null,
         1,
         1,
         1,
-        null,
         1,
         1,
         1,
-        null,
         1,
         null,
+        null,
+        1,
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/student/Documents/Week6_DB/bookmarks/spec/features/app_spec.rb": [
+      "/Users/araisin/Desktop/Makers/bookmarks/spec/features/app_spec.rb": [
         1,
         null,
         1,
@@ -39,6 +43,19 @@
         null,
         null,
         null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
         1,
         1,
         1,
@@ -50,6 +67,6 @@
         null
       ]
     },
-    "timestamp": 1559741547
+    "timestamp": 1559751116
   }
 }

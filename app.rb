@@ -13,9 +13,9 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/adder' do
-    Bookmark.create(params[:bookmark_url])
+    Bookmark.create(params[:title], params[:bookmark_url])
     redirect '/bookmarks'
   end
 
-  run! if app_file == $PROGRAM_NAME
+  run! if app_file == $0
 end
